@@ -1,37 +1,23 @@
 require([
     "esri/config",
-     "esri/Map",
-     "esri/views/MapView",
-     "esri/layers/FeatureLayer"
+    "esri/Map",
+    "esri/WebMap",
+    "esri/views/MapView",
 
-   ], function (esriConfig,Map, MapView,FeatureLayer) {
+
+   ], function (esriConfig, WebMap, MapView) {
 
      esriConfig.apiKey = "AAPK63dc6f1377f44fbb9b5ba0d22ce2078ege009eQiv7i9ZH9WXTW6kCVNwNfM-bpC3Dx0cneLrgIGAcct--dMWXnDaKkVcoC6";
-     const map = new Map({
-       basemap: "arcgis-imagery" // Basemap layer
-     });
-
-     const view = new MapView({
-       map: map,
-       center: [76.26429,9.9256],
-       zoom: 7, // scale: 72223.819286
-       container: "viewDiv",
-       constraints: {
-         snapToZoom: false
-       }
-     });
-
-     const pointsLayer = new FeatureLayer({
-      url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/geojson_for_my_valentine/FeatureServer/0"
+     const webmap = new WebMap({
+      portalItem: {
+        id: "b42d2263155e4022a4d866c1baaca810"
+      }
     });
 
-    //Line feature layer (lines)
-    const LineLayer = new FeatureLayer({
-      url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/geojson_for_my_valentine/FeatureServer/1"
+    const view = new MapView({
+      container: "viewDiv",
+      map: webmap
+
     });
-    
-    map.add(pointsLayer,0);
-    map.add(LineLayer, 1);
 
-
-   })
+});
