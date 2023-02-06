@@ -2,7 +2,6 @@ require([
   "esri/config",
   "esri/Map",
   "esri/views/MapView",
-
   "esri/layers/FeatureLayer"
 
 ], function(esriConfig,Map, MapView, FeatureLayer) {
@@ -16,7 +15,7 @@ require([
     const view = new MapView({
       map: map,
       center: [76.26429,9.9256],
-      zoom: 7, // scale: 72223.819286
+      zoom: 6.5, // scale: 6.5
       container: "viewDiv",
       constraints: {
         snapToZoom: false
@@ -29,14 +28,11 @@ require([
   });
 
   map.add(HeartLayer);
-
 //Route feature layer (lines)
   const RouteLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/geojson_for_my_valentine/FeatureServer/1"
   });
 
   map.add(RouteLayer, 0);
-
-
 
 });
