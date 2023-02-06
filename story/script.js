@@ -10,7 +10,7 @@ require([
    // esriConfig.apiKey = "AAPK63dc6f1377f44fbb9b5ba0d22ce2078ege009eQiv7i9ZH9WXTW6kCVNwNfM-bpC3Dx0cneLrgIGAcct--dMWXnDaKkVcoC6";
     
     const map = new Map({
-      basemap: "streets-vector"
+      basemap: "dark-gray-vector"
     });
 
     const view = new MapView({
