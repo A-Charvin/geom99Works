@@ -20,3 +20,5 @@
 
 // Reference : https://developers.arcgis.com/javascript/latest/display-a-web-map/
 // Full map link : https://fleming.maps.arcgis.com/apps/mapviewer/index.html?webmap=b42d2263155e4022a4d866c1baaca810
+// esriConfig.apiKey = "AAPK63dc6f1377f44fbb9b5ba0d22ce2078ege009eQiv7i9ZH9WXTW6kCVNwNfM-bpC3Dx0cneLrgIGAcct--dMWXnDaKkVcoC6";
+// API Key is not required for the functioning of the webmap here.
