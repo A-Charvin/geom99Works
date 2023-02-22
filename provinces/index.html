@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canadian Provinces</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://js.arcgis.com/4.23/"></script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Canadian Provinces</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="map" class="container py-4">
+        <p class="lead text-center">Welcome to our interactive website about the Canadian provinces!</p>
+        <p class="text-justify">Our website is designed to help kids learn about the provinces and territories of Canada in a fun and engaging way. By using a combination of Bootstrap and ArcGIS Webmap, we've created an interactive map that allows you to explore the different regions of Canada and learn more about their unique characteristics, cultures, and histories. Click on a province to discover interesting facts, such as its capital city, population, and famous landmarks.</p>
+        <p class="text-center">We hope you enjoy using our website and learning more about this wonderful country!</p>
+    </div>
+  </main>
+    <div class="container">
+        <h1>Canadian Provinces</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_Alberta.svg" alt="Alberta flag">
+              <div class="card-body">
+                <h4 class="card-title">Alberta</h4>
+                <p class="card-text">Capital: Edmonton</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_British_Columbia.svg" alt="British Columbia flag">
+              <div class="card-body">
+                <h4 class="card-title">British Columbia</h4>
+                <p class="card-text">Capital: Victoria</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Manitoba.svg" alt="Manitoba flag">
+              <div class="card-body">
+                <h4 class="card-title">Manitoba</h4>
+                <p class="card-text">Capital: Winnipeg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Flag_of_New_Brunswick.svg" alt="New Brunswick flag">
+              <div class="card-body">
+                <h4 class="card-title">New Brunswick</h4>
+                <p class="card-text">Capital: Fredericton</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Newfoundland_and_Labrador.svg" alt="Newfoundland and Labrador flag">
+              <div class="card-body">
+                <h4 class="card-title">Newfoundland and Labrador</h4>
+                <p class="card-text">Capital: St. John's</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_the_Northwest_Territories.svg" alt="Northwest Territories flag">
+              <div class="card-body">
+                <h4 class="card-title">Northwest Territories</h4>
+                <p class="card-text">Capital: Yellowknife</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Nova_Scotia_flag.svg" alt="Nova Scotia flag">
+                <div class="card-body">
+                  <h4 class="card-title">Nova Scotia</h4>
+                  <p class="card-text">Capital: Halifax</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/9/90/Flag_of_Nunavut.svg" alt="Nunavut flag">
+                <div class="card-body">
+                  <h4 class="card-title">Nunavut</h4>
+                  <p class="card-text">Capital: Iqaluit</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Ontario.svg" alt="Ontario flag">
+                <div class="card-body">
+                  <h4 class="card-title">Ontario</h4>
+                  <p class="card-text">Capital: Toronto</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Flag_of_Prince_Edward_Island.svg" alt="Prince Edward Island flag">
+                <div class="card-body">
+                  <h4 class="card-title">Prince Edward Island</h4>
+                  <p class="card-text">Capital: Charlottetown</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Flag_of_Quebec.svg" alt="Quebec flag">
+                <div class="card-body">
+                  <h4 class="card-title">Quebec</h4>
+                  <p class="card-text">Capital: Quebec City</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Flag_of_Saskatchewan.svg" alt="Saskatchewan flag">
+                <div class="card-body">
+                  <h4 class="card-title">Saskatchewan</h4>
+                  <p class="card-text">Capital: Regina</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_Yukon.svg" alt="Yukon flag">
+                <div class="card-body">
+                  <h4 class="card-title">Yukon</h4>
+                  <p class="card-text">Capital: Whitehorse</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="container my-5">
+        <h2 class="text-center">Interactive Map of Canadian Provinces</h2>
+        <p class="text-center">Click on a province to learn more about it.</p>
+        <!-- Embed ArcGIS Webmap -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.arcgis.com/apps/instant/minimalist/index.html?webmap=91b05972aeda408b85afb9961700a807"></iframe>
+        </div>
+      </div>
+    
+      <!-- Add Footer -->
+      <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+          <p>
+            Made with ❤️ by A.Charvin. Flag images provided by <a href="https://en.wikipedia.org/wiki/List_of_Canadian_flags">Wikipedia</a>, map data provided by <a href="https://www.esri.com/">ESRI</a>.
+          </p>
+        </div>
+      </footer>   
+</body>
+</html>
