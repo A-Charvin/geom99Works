@@ -8,6 +8,7 @@ This repository contains the submission works for GEOM99 - Web GIS Development. 
 4. tutorial folder - contains 4 tutorial html files
 5. Story folder - contains the main web link for the story map
 6. assets folder - contains assets for the github page link
+7. Logs folder - contains updated Weekly Logs for ongoing activites
 
 To access the home page of the repository, use the following link:
 
