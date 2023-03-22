@@ -120,7 +120,7 @@ Next steps: Continue learning and experimenting with Experience Builder.
 **Task: Saving and publishing an Experience in ArcGIS Experience Builder**   
 Date/Time: 1:53 AM 22-03-2023  
 Outcomes: Successfully saved and published an Experience.  
-Resources: N/A  
+Resources: [Experience Builder](https://experience.arcgis.com/experience/545f3e0fc2a641e79ceab73dc3afbb1b)  
 Next steps: Further exploration and experimentation.  
 
 **Task: Updating and formatting log file for GitHub**  
