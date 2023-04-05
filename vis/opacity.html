@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Tree Inventory</title>
+
+		<link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+		<script src="https://js.arcgis.com/4.26/"></script>
+
+		<style>
+			html,
+			body,
+			#viewDiv {
+			  padding: 0;
+			  margin: 0;
+			  height: 100%;
+			  width: 100%;
+			}
+
+			#titleDiv {
+			  padding: 10px;
+			}
+
+			#titleText {
+			  font-size: 20pt;
+			  font-weight: 60;
+			  padding-bottom: 10px;
+			}
+
+			.esri-legend__layer {
+			  margin-bottom: 10px;
+			}
+		</style>
+		<script>
+			   require([
+			    "esri/views/MapView",
+			    "esri/Map",
+			    "esri/layers/FeatureLayer",
+			    "esri/renderers/SimpleRenderer",
+			    "esri/symbols/SimpleMarkerSymbol",
+			    "esri/symbols/SimpleFillSymbol",
+			    "esri/widgets/Legend"],
+			    function (
+			  MapView, Map, FeatureLayer, SimpleRenderer, SimpleMarkerSymbol, SimpleFillSymbol, Legend
+			) {
+
+			  // Tree inventory layer
+			  const treeInventoryLayer = new FeatureLayer({
+            url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Tree_Inventory/FeatureServer/0",
+            opacity: 0.5,
+            renderer: new SimpleRenderer({
+                symbol: new SimpleMarkerSymbol({
+                color: [0, 128, 0], // Dark green
+                style: "circle",
+                size: 7,
+                outline: {
+                    color: [0, 0, 0],
+                    width: 1
+                }
+                })
+            }),
+            outFields: ["*"],
+            popupTemplate: {
+                title: "Tree Inventory",
+                content: "<b>Facility ID:</b> {FACILITYID}<br/>" +
+                        "<b>Genus:</b> {GENUS}<br/>" +
+                        "<b>Inventory:</b> {INVENTORY_}<br/>" +
+                        "<b>Common Name:</b> {COMMON}<br/>" +
+                        "<b>Tree Location:</b> {TREE_LOCAT}<br/>" +
+                        "<b>Zone:</b> {ZONE}<br/>" +
+                        "<b>Family:</b> {FAMILY}<br/>" +
+                        "<b>Address Number:</b> {ADDNUM}<br/>" +
+                        "<b>Street:</b> {STREET}<br/>" +
+                        "<b>Botanical Name:</b> {BOTANICAL}"
+            }
+            });
+
+			const map = new Map({
+			basemap: "dark-gray-vector",
+			layers: [treeInventoryLayer]
+			});
+
+			const view = new MapView({
+			map,
+			container: "viewDiv",
+			center: [-78.317774, 44.309058],
+			zoom: 13
+			});
+
+			// Add legend to view
+			const legend = new Legend({
+			view: view,
+			container: "legendDiv"
+			});
+			view.ui.add(legend, "bottom-left");
+
+			view.ui.add("titleDiv", "top-right");
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id="viewDiv"></div>
+		<div id="titleDiv" class="esri-widget">
+			<div id="titleText">Tree Inventory</div>
+		
+
+		</div>
+		<div id="legendDiv"></div>
+        <div id="popupDiv" class="esri-widget"></div>
+	</body>
+</html>
