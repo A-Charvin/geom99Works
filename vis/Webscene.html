@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>PTB_LiDAR Test Data WEbScene - 4.26</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/dark/main.css" />
+    <script src="https://js.arcgis.com/4.26/"></script>
+    <script>
+      require([
+        "esri/config",
+        "esri/WebScene",
+        "esri/views/SceneView"
+      ], function (esriConfig, WebScene, SceneView) {
+        esriConfig.apiKey = AAPK63dc6f1377f44fbb9b5ba0d22ce2078ege009eQiv7i9ZH9WXTW6kCVNwNfM-bpC3Dx0cneLrgIGAcct--dMWXnDaKkVcoC6;
+        const scene = new WebScene({
+          portalItem: {
+            id: "766c2011664346cebcd2d45e4e6a5863"
+          }
+        });
+        const view = new SceneView({
+          container: "viewDiv",
+          map: scene
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
